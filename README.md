@@ -14,3 +14,14 @@ This tutorial includes Docker images and an application for Java development usi
 * [NetBeans](NetBeans-README.md)
 
 Before starting the tutorial, please have [Docker](https://www.docker.com/products/overview) installed.
+
+**Windows:**
+
+This tutorial uses Linux containers, set Docker for Windows to use linux containers
+
+Github automatically changes unix LF to Windows CRLF when the repository is cloned. The Dockerfile that builds the Apache Tomcat image requires two files for configuration. These files will need to be converted to unix LF. In Powershell or the github client window:
+
+```
+dos2unix ./registration-webserver/tomcat/run.sh
+dos2unix ./registration-webserver/tomcat/tomcat-users.xml
+```
